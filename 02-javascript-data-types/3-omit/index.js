@@ -6,4 +6,20 @@
  */
 export const omit = (obj, ...fields) => {
 
+    let newObj = {};
+
+    for(let [key,value] of Object.entries(obj)){
+
+      let inArr = false;
+
+      for(let field of fields)
+        if(field == key){
+            inArr = true;
+            break;
+        }
+    
+        if(inArr == false)
+            newObj[key] = obj[key]; 
+    }
+    return newObj;
 };
