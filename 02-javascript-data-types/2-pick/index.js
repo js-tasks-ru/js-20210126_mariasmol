@@ -6,7 +6,7 @@
  */
 export const pick = (obj, ...fields) => {
 
-    let newObj = {};
+    const newObj = {};
 
     for(let field of fields){
         newObj[field] = obj[field];
